@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Verificando o País</h1>
+    País:<input type="string" name="txtpais" id="txtpais">
+    <input id="botao" type="button" value="OK" onclick="Verificando()" >
+    <div id="res"></div>
+
+    <!-- Remove the extra closing </div> tag -->
+    <script>
+        function Verificando(){
+        var a = document.getElementById('botao')
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',sair)
+        function entrar(){
+            a.style.background = 'LightGrey'
+        }
+        function sair(){
+            a.style.background = 'White'
+        }
+        var txtpais = document.querySelector('input#txtpais')
+        var res = document.querySelector('div#res')
+        var ps = String(txtpais.value)
+        res.innerHTML = `<p>Seu país <strong>${ps}</strong> é muito legal</strong></p>`
+        if(ps == 'Brasil'){
+            res.innerHTML += `<p> Por isso, você é Brasileiro! </p>`
+        }else{
+             res.innerHTML += `<p> Porém, você é estrangeiro! </p>`
+        }
+    }
+    </script>
+    
+</body>
+</html>
+
+<!-- This is a JavaScript code block -->
+<!--
+<script>
+    // Declaring a variable called "país" and assigning it the value 'EUA'
+    // var país = 'EUA';
+
+    // Printing a message to the console using template literals
+    // console.log(`Vivendo em ${país}`);
+
+    // Checking if the value of "país" is equal to 'Brasil'
+    // if (país == 'Brasil') {
+        // Printing a message to the console if the condition is true
+        // console.log('Você é Brasileiro!');
+    // } else {
+        // Printing a message to the console if the condition is false
+        // console.log('Você é Estrangeiro!');
+    // }
+</>
+-->
